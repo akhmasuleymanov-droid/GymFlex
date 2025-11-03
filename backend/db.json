@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "u_admin",
+      "email": "admin@gymflex.ru",
+      "password": "$2a$08$placeholder",
+      "name": "Admin",
+      "role": "admin",
+      "created": ""
+    }
+  ],
+  "gyms": [
+    {
+      "id": "g1",
+      "name": "Titan Gym",
+      "lat": 42.9839,
+      "lon": 47.5047,
+      "type": "\u26a1",
+      "load": 25
+    },
+    {
+      "id": "g2",
+      "name": "Energy Fitness",
+      "lat": 42.9872,
+      "lon": 47.504,
+      "type": "W",
+      "load": 65
+    },
+    {
+      "id": "g3",
+      "name": "Forma Club",
+      "lat": 42.98,
+      "lon": 47.5065,
+      "type": "M",
+      "load": 90
+    }
+  ],
+  "visits": []
+}

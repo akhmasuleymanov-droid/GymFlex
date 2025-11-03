@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GYMFLEX — Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="splash-inner">
+      <div class="logo">GYMFLEX</div>
+      <div class="sub">Загрузка...</div>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="header">
+      <div class="logo">GYMFLEX</div>
+      <div class="controls">
+        <button id="themeToggle" class="btn ghost">Тёмная</button>
+        <button id="roleToggle" class="btn ghost">Роль: Клиент</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="mapView" class="view">
+        <h2>Выберите зал</h2>
+        <div id="map" class="map"></div>
+      </section>
+
+      <section id="programsView" class="view hidden">
+        <h2>Программы тренировок</h2>
+        <div class="card">
+          <h3>Набор массы</h3>
+          <p>Силовые тренировки и питание для роста мышечной массы.</p>
+          <button class="btn primary" onclick="alert('Демо: подробности программы')">Подробнее</button>
+        </div>
+        <div class="card">
+          <h3>Похудение</h3>
+          <p>Кардио и силовой тренинг с акцентом на дефицит калорий.</p>
+          <button class="btn primary" onclick="alert('Демо: подробности программы')">Подробнее</button>
+        </div>
+        <div class="card">
+          <h3>Тонус / Здоровье</h3>
+          <p>Умеренные тренировки для поддержания формы и самочувствия.</p>
+          <button class="btn primary" onclick="alert('Демо: подробности программы')">Подробнее</button>
+        </div>
+      </section>
+
+      <section id="profileView" class="view hidden">
+        <h2>Профиль</h2>
+        <div class="card profile-card">
+          <label>Имя
+            <input id="profileName" placeholder="Иван" />
+          </label>
+          <label>Пол
+            <select id="profileGender"><option value="m">Мужской</option><option value="w">Женский</option></select>
+          </label>
+          <label>Возраст
+            <input id="profileAge" type="number" min="10" max="120" />
+          </label>
+          <label>Вес (кг)
+            <input id="profileWeight" type="number" min="20" max="300" />
+          </label>
+          <label>Рост (см)
+            <input id="profileHeight" type="number" min="100" max="250" />
+          </label>
+          <div style="margin-top:10px">
+            <button id="saveProfile" class="btn primary">Сохранить профиль</button>
+            <button id="showQR" class="btn">Показать QR (демо)</button>
+          </div>
+        </div>
+        <div id="profileMsg" class="muted"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button id="tabMap" class="nav-btn active">Карта</button>
+      <button id="tabPrograms" class="nav-btn">Программы</button>
+      <button id="tabProfile" class="nav-btn">Профиль</button>
+    </nav>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-inner">
+      <button id="modalClose" class="modal-close">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
